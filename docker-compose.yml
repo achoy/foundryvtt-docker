@@ -4,16 +4,17 @@ version: "3.8"
 services:
   foundry:
     image: felddy/foundryvtt:release
-    hostname: my_foundry_host
+    hostname: gameworld.choyware.us
     restart: "no"
     volumes:
       - type: bind
-        source: ./data
+        source: /sata_hdd/data1/foundrydata
         target: /data
     environment:
-      - FOUNDRY_PASSWORD=<your_password>
-      - FOUNDRY_USERNAME=<your_username>
+      - FOUNDRY_PASSWORD=G--INfame-spO1RtIng
+      - FOUNDRY_USERNAME=askchoy
       - FOUNDRY_ADMIN_KEY=atropos
+      - FOUNDRY_LICENSE_KEY=IGSU-KCX0-UXR6-NZPP-NIXR-5LGC
       # - CONTAINER_CACHE=/data/container_cache
       # - CONTAINER_CACHE_SIZE=
       # - CONTAINER_PATCHES=/data/container_patches
@@ -37,7 +38,6 @@ services:
       # - FOUNDRY_IP_DISCOVERY=
       # - FOUNDRY_LANGUAGE=
       # - FOUNDRY_LOCAL_HOSTNAME=
-      # - FOUNDRY_LICENSE_KEY=
       # - FOUNDRY_MINIFY_STATIC_FILES=
       # - FOUNDRY_PASSWORD_SALT=
       # - FOUNDRY_PROTOCOL=
